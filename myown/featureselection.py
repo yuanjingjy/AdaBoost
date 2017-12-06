@@ -4,6 +4,7 @@ Created on Wed Sep  6 08:42:39 2017
 
 @author: John
 """
+#i have used the whole night to learn how to work with github
 
 import ann
 import numpy as np
@@ -33,7 +34,7 @@ data01 = ann.preprocess(dataMat1)
 dataMat=np.array(data01)
 
 dataandlabel=pd.DataFrame(labelMat,columns=['label'])
-dataandlabel.to_csv('F:/label.csv', encoding='utf-8', index=True)
+#dataandlabel.to_csv('F:/label.csv', encoding='utf-8', index=True)
 for i in range(len(labelMat)):
     if labelMat[i] == -1:
         labelMat[i] = 0;  # adaboost只能区分-1和1的标签
