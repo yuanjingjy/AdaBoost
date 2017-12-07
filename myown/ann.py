@@ -40,8 +40,8 @@ def rowscale(dataset):#normalize the data between -1 and 1 according to row
 
 def ANNClassifier(trainin,trainout,testin):
     from sklearn.neural_network import MLPClassifier#import the classifier
-    clf=MLPClassifier(hidden_layer_sizes=(100,), activation='tanh',
-                      shuffle=True,solver='sgd',alpha=1e-6,batch_size=3,
+    clf=MLPClassifier(hidden_layer_sizes=(80,), activation='tanh',
+                      shuffle=True,solver='sgd',alpha=1e-6,batch_size=1,
                       learning_rate='adaptive')
 #==============================================================================
 #     clf=MLPClassifier(solver='lbfgs',alpha=1e-5,hidden_layer_sizes=(90,1),

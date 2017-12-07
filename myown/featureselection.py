@@ -24,16 +24,18 @@ sql_eigen=pandas_data.fillna(np.mean(pandas_data))
 data =sql_eigen.iloc[:,0:85]
 # data.iloc[:,84][data.iloc[:,84]>200]=91
 data['age'][data['age']>200]=91
+data2=data.drop(['hr_cov', 'bpsys_cov', 'bpdia_cov', 'bpmean_cov', 'pulse_cov', 'resp_cov', 'spo2_cov'],axis=1)
+
 label=sql_eigen['class_label']
 
-dataMat1=np.array(data)
+dataMat1=np.array(data2)
 labelMat=np.array(label)
 
 data01 = ann.preprocess(dataMat1)
 # dataMat = ann.preprocess1(data01)
 dataMat=np.array(data01)
 
-dataandlabel=pd.DataFrame(labelMat,columns=['label'])
+#dataandlabel=pd.DataFrame(labelMat,columns=['label'])
 #dataandlabel.to_csv('F:/label.csv', encoding='utf-8', index=True)
 for i in range(len(labelMat)):
     if labelMat[i] == -1:
@@ -45,7 +47,7 @@ prenum_train = []
 prenum_test  = []
 weight=[]
 ######################################################
-#########select features with selectKBest#####################
+#########select features with selectKBest######################
 # selectmodel=sfs.SelectKBest(sfs.mutual_info_classif)
 # selectmodel.fit(dataMat,labelMat)
 # selectedeigen=selectmodel.get_support()
@@ -65,6 +67,9 @@ weight=[]
 # dataMat=dataMat_new
 ######################################################
 
+
+######################################################
+##########RFE &RFECV###########
 clf1=MLPClassifier(hidden_layer_sizes=(90,), activation='tanh',
                       shuffle=True,solver='sgd',alpha=1e-6,batch_size=5,
                       learning_rate='adaptive')
@@ -73,13 +78,17 @@ clf=svm.SVC(C=2,kernel='linear',gamma='auto',shrinking=True,probability=True,
              tol=0.001,cache_size=200,class_weight='balanced',verbose=False,
              max_iter=-1,decision_function_shape='ovr',random_state=None)
 score =[]
-for i in range(84):
+###the loop markdown the the estimator score when select different num of features
+for i in range(78):
     rfe = RFE(estimator=clf, n_features_to_select=i+1, step=1)
     rfe.fit(dataMat, labelMat)
     selectedeigen = rfe.support_
     selectedscore = rfe.score(dataMat, labelMat)
     score.append(selectedscore)
 
+score=np.array(score)
+dataandlabel=pd.DataFrame(score,columns=['label'])
+dataandlabel.to_csv('F:/score.csv', encoding='utf-8', index=True)
 
 # selectedpvalue=selectmodel.pvalues_
 # compareeigen=pd.DataFrame([selectedscore,selectedpvalue,selectedeigen],index=['score','pvalue','YN'],columns=data.keys())
@@ -92,7 +101,9 @@ model = rfe.estimator_
 compareeigen=pd.DataFrame([rank_fea,selectedeigen],index=['rank','YN'],columns=data.keys())
 sorteigen=compareeigen.sort_values(by='rank',ascending=False,axis=1)
 #
-# data_mat=dataMat(select_feature)
+data_mat=dataMat(select_feature)
+#######################################################
+
 skf = StratifiedKFold(n_splits=10)
 for train, test in skf.split(dataMat, labelMat):
     # ==============================================================================
@@ -104,8 +115,10 @@ for train, test in skf.split(dataMat, labelMat):
     test_in = dataMat[test]
     train_out = labelMat[train]
     test_out = labelMat[test]
-    train_predict, test_predict, proba_train, proba_test,weights = ann.SVMClassifier(train_in, train_out, test_in)
-    weight.append(weights)
+    # train_predict, test_predict, proba_train, proba_test,weights = ann.SVMClassifier(train_in, train_out, test_in)#SVM
+    # weight.append(weights)
+    train_predict, test_predict, proba_train, proba_test = ann.ANNClassifier(train_in, train_out, test_in)#ANN
+
     proba_train = proba_train[:, 1]
     proba_test = proba_test[:, 1]
     test1, test2 = ann.evaluatemodel(train_out, train_predict, proba_train)  # test model with trainset
