@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd9ef12f-d58e-4622-b9cb-db9b5b68d9d1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="dd9ef12f-d58e-4622-b9cb-db9b5b68d9d1" name="Default" comment="I have used the whole night to learn how to use github">
+      <change beforePath="$PROJECT_DIR$/.idea/AdaBoost.iml" afterPath="$PROJECT_DIR$/.idea/AdaBoost.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/myown/featureselection.ipynb" afterPath="$PROJECT_DIR$/myown/featureselection.ipynb" />
+      <change beforePath="$PROJECT_DIR$/myown/featureselection.py" afterPath="$PROJECT_DIR$/myown/featureselection.py" />
+      <change beforePath="$PROJECT_DIR$/myown/testpandas.ipynb" afterPath="$PROJECT_DIR$/myown/testpandas.ipynb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,40 +24,21 @@
       <file leaf-file-name="featureselection.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myown/featureselection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="21" column="50" lean-forward="true" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+            <state relative-caret-position="457">
+              <caret line="63" column="41" lean-forward="false" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="41" />
               <folding>
-                <element signature="e#146#156#0" expanded="true" />
+                <element signature="e#144#154#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testoversampling.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/unbalancecv/testoversampling.py">
+      <file leaf-file-name="shuffle_sample.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myown/shuffle_sample.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="348">
+              <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="unbalancecv.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/unbalancecv/unbalancecv.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="43" column="46" lean-forward="false" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="featureselection.ipynb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myown/featureselection.ipynb">
-          <provider selected="true" editor-type-id="ipnb-editor">
-            <state>
-              <selected id="10" />
             </state>
           </provider>
         </entry>
@@ -60,8 +46,8 @@
       <file leaf-file-name="ann.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myown/ann.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="59" column="75" lean-forward="false" selection-start-line="59" selection-start-column="64" selection-end-line="59" selection-end-column="75" />
+            <state relative-caret-position="957">
+              <caret line="34" column="27" lean-forward="false" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
               <folding>
                 <element signature="e#84#102#0" expanded="true" />
               </folding>
@@ -73,16 +59,25 @@
         <entry file="file://$PROJECT_DIR$/myown/testpandas.ipynb">
           <provider selected="true" editor-type-id="ipnb-editor">
             <state>
-              <selected id="3" />
+              <selected id="0" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pydevd.py" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <file leaf-file-name="featureselection.ipynb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myown/featureselection.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testLR.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myown/testLR.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43820">
-              <caret line="1602" column="0" lean-forward="false" selection-start-line="1602" selection-start-column="0" selection-end-line="1602" selection-end-column="0" />
+            <state relative-caret-position="1537">
+              <caret line="60" column="31" lean-forward="false" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -111,18 +106,17 @@
         <option value="$PROJECT_DIR$/myown/testLR.py" />
         <option value="$PROJECT_DIR$/testcross.py" />
         <option value="$PROJECT_DIR$/myown/testpandas.ipynb" />
-        <option value="$PROJECT_DIR$/myown/featureselection.ipynb" />
         <option value="$PROJECT_DIR$/myown/ann.py" />
         <option value="$PROJECT_DIR$/unbalancecv/testheadfile.py" />
+        <option value="$PROJECT_DIR$/myown/featureselection.ipynb" />
         <option value="$PROJECT_DIR$/myown/featureselection.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="6" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="704" />
     <option name="width" value="1620" />
-    <option name="height" value="920" />
+    <option name="height" value="1094" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -156,8 +150,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,25 +160,18 @@
             <path>
               <item name="AdaBoost" type="b2602c69:ProjectViewProjectNode" />
               <item name="AdaBoost" type="462c0819:PsiDirectoryNode" />
-              <item name="unbalancecv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AdaBoost" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="AdaBoost" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.6.0 (E:\Anaconda\python.exe) &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="myown" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/myown/featureselection.py" />
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -218,22 +203,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.featureselection">
-    <configuration name="AdaBoost" type="Python.Ipnb" factoryName="Jupyter Notebook">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="AdaBoost" />
-      <option name="additionalOptions" value="" />
-      <option name="ipnbHost" value="127.0.0.1" />
-      <option name="ipnbPort" value="8888" />
-    </configuration>
     <configuration name="ann" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -250,14 +219,15 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="featureselection" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="featureselection" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="E:\Anaconda\python.exe" />
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/myown" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -267,6 +237,7 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="testLR" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -284,6 +255,7 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="testann" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -301,6 +273,7 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="testcross" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -318,27 +291,46 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="AdaBoost" type="Python.Ipnb" factoryName="Jupyter Notebook">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="AdaBoost" />
+      <option name="additionalOptions" value="" />
+      <option name="ipnbHost" value="127.0.0.1" />
+      <option name="ipnbPort" value="8888" />
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Jupyter Notebook.AdaBoost" />
-      <item index="1" class="java.lang.String" itemvalue="Python.testLR" />
-      <item index="2" class="java.lang.String" itemvalue="Python.testann" />
-      <item index="3" class="java.lang.String" itemvalue="Python.featureselection" />
+      <item index="1" class="java.lang.String" itemvalue="Python.featureselection" />
+      <item index="2" class="java.lang.String" itemvalue="Python.testLR" />
+      <item index="3" class="java.lang.String" itemvalue="Python.testann" />
       <item index="4" class="java.lang.String" itemvalue="Python.ann" />
       <item index="5" class="java.lang.String" itemvalue="Python.testcross" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.featureselection" />
-        <item index="1" class="java.lang.String" itemvalue="Python.testcross" />
-        <item index="2" class="java.lang.String" itemvalue="Python.ann" />
-        <item index="3" class="java.lang.String" itemvalue="Python.testann" />
-        <item index="4" class="java.lang.String" itemvalue="Python.testLR" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.testcross" />
+        <item index="1" class="java.lang.String" itemvalue="Python.ann" />
+        <item index="2" class="java.lang.String" itemvalue="Python.testann" />
+        <item index="3" class="java.lang.String" itemvalue="Python.testLR" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -365,7 +357,7 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -376,19 +368,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="6" width="1620" height="920" extended-state="0" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18540052" sideWeight="0.4934334" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12672323" sideWeight="0.4934334" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33614627" sideWeight="0.49481866" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29817158" sideWeight="0.2642487" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.31504923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2742616" sideWeight="0.48963732" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27326968" sideWeight="0.48963732" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32137734" sideWeight="0.7131783" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.100662254" sideWeight="0.6353627" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2792363" sideWeight="0.6353627" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23251295" sideWeight="0.5065666" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30993378" sideWeight="0.7357513" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.81782943" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25179" sideWeight="0.7357513" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -396,6 +388,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.81782943" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32770744" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -465,13 +458,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/myown/featureselection.py</url>
-          <line>150</line>
+          <line>221</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/myown/featureselection.py</url>
-          <line>95</line>
+          <line>164</line>
           <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/myown/featureselection.py</url>
+          <line>111</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/myown/featureselection.py</url>
+          <line>108</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/myown/featureselection.py</url>
+          <line>70</line>
+          <option name="timeStamp" value="55" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -484,7 +492,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="43" />
+      <option name="time" value="61" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -495,20 +503,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/adaboost.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="22" column="27" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="22" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myown/testLR.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myown/testann.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -743,8 +737,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myown/testLR.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="980">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        <state relative-caret-position="1537">
+          <caret line="60" column="31" lean-forward="false" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -762,13 +757,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/unbalancecv/testheadfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/unbalancecv/testheadfile.py" />
     <entry file="file://$PROJECT_DIR$/myown/eigen_78_1288.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -776,18 +765,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myown/testpandas.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="43820">
           <caret line="1602" column="0" lean-forward="false" selection-start-line="1602" selection-start-column="0" selection-end-line="1602" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -795,14 +776,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
           <caret line="43" column="46" lean-forward="false" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myown/featureselection.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="27" />
         </state>
       </provider>
     </entry>
@@ -810,26 +783,54 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myown/ann.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="59" column="75" lean-forward="false" selection-start-line="59" selection-start-column="64" selection-end-line="59" selection-end-column="75" />
+        <state relative-caret-position="957">
+          <caret line="34" column="27" lean-forward="false" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
           <folding>
             <element signature="e#84#102#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/myown/featureselection.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myown/shuffle_sample.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myown/testpandas.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/pandas/core/internals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="4279" column="0" lean-forward="false" selection-start-line="4279" selection-start-column="0" selection-end-line="4279" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/myown/featureselection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="21" column="50" lean-forward="true" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
+        <state relative-caret-position="457">
+          <caret line="63" column="41" lean-forward="false" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="41" />
           <folding>
-            <element signature="e#146#156#0" expanded="true" />
+            <element signature="e#144#154#0" expanded="true" />
           </folding>
         </state>
       </provider>
