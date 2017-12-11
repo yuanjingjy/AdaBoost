@@ -79,29 +79,29 @@ clf=svm.SVC(C=2,kernel='linear',gamma='auto',shrinking=True,probability=True,
              max_iter=-1,decision_function_shape='ovr',random_state=None)
 score =[]
 ###the loop markdown the the estimator score when select different num of features
-for i in range(78):
-    rfe = RFE(estimator=clf, n_features_to_select=i+1, step=1)
-    rfe.fit(dataMat, labelMat)
-    selectedeigen = rfe.support_
-    selectedscore = rfe.score(dataMat, labelMat)
-    score.append(selectedscore)
-
-score=np.array(score)
-dataandlabel=pd.DataFrame(score,columns=['label'])
-dataandlabel.to_csv('F:/score.csv', encoding='utf-8', index=True)
-
-# selectedpvalue=selectmodel.pvalues_
-# compareeigen=pd.DataFrame([selectedscore,selectedpvalue,selectedeigen],index=['score','pvalue','YN'],columns=data.keys())
-# sorteigen=compareeigen.sort_values(by='score',ascending=False,axis=1)
-num_features = rfe.n_features_
-select_feature = rfe.support_
-rank_fea = rfe.ranking_
-model = rfe.estimator_
-
-compareeigen=pd.DataFrame([rank_fea,selectedeigen],index=['rank','YN'],columns=data.keys())
-sorteigen=compareeigen.sort_values(by='rank',ascending=False,axis=1)
+# for i in range(78):
+#     rfe = RFE(estimator=clf, n_features_to_select=i+1, step=1)
+#     rfe.fit(dataMat, labelMat)
+#     selectedeigen = rfe.support_
+#     selectedscore = rfe.score(dataMat, labelMat)
+#     score.append(selectedscore)
 #
-data_mat=dataMat(select_feature)
+# score=np.array(score)
+# dataandlabel=pd.DataFrame(score,columns=['label'])
+# dataandlabel.to_csv('F:/score.csv', encoding='utf-8', index=True)
+#
+# # selectedpvalue=selectmodel.pvalues_
+# # compareeigen=pd.DataFrame([selectedscore,selectedpvalue,selectedeigen],index=['score','pvalue','YN'],columns=data.keys())
+# # sorteigen=compareeigen.sort_values(by='score',ascending=False,axis=1)
+# num_features = rfe.n_features_
+# select_feature = rfe.support_
+# rank_fea = rfe.ranking_
+# model = rfe.estimator_
+#
+# compareeigen=pd.DataFrame([rank_fea,selectedeigen],index=['rank','YN'],columns=data.keys())
+# sorteigen=compareeigen.sort_values(by='rank',ascending=False,axis=1)
+# #
+# data_mat=dataMat(select_feature)
 #######################################################
 
 skf = StratifiedKFold(n_splits=10)
@@ -115,9 +115,9 @@ for train, test in skf.split(dataMat, labelMat):
     test_in = dataMat[test]
     train_out = labelMat[train]
     test_out = labelMat[test]
-    # train_predict, test_predict, proba_train, proba_test,weights = ann.SVMClassifier(train_in, train_out, test_in)#SVM
-    # weight.append(weights)
-    train_predict, test_predict, proba_train, proba_test = ann.ANNClassifier(train_in, train_out, test_in)#ANN
+    train_predict, test_predict, proba_train, proba_test,weights = ann.SVMClassifier(train_in, train_out, test_in)#SVM
+    weight.append(weights)
+    # train_predict, test_predict, proba_train, proba_test = ann.ANNClassifier(train_in, train_out, test_in)#ANN
 
     proba_train = proba_train[:, 1]
     proba_test = proba_test[:, 1]
@@ -146,5 +146,7 @@ prenum_test = np.array(prenum_test)
 
 evaluate_train_mean = np.mean(evaluate_test, axis=0)
 # np.array(test_important)
+svmscore = pd.DataFrame(weight, columns=data2.keys())
+svmscore.to_csv('F:/svmtest.csv', encoding='utf-8', index=True)
 weight=np.array(weight)
 print("view the variable")
