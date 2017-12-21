@@ -6,47 +6,62 @@ Created on Wed Sep  6 08:42:39 2017
 """
 
 import ann
+import  pandas as pd
 import numpy as np
 from sklearn.model_selection import StratifiedShuffleSplit
+from imblearn.under_sampling import RandomUnderSampler
 from sklearn.model_selection import StratifiedKFold
+########全部的特征值###################################3
+# dataMat1,labelMat=ann.loadDataSet('final_shuffle.txt')
+# #==============================================================================
+# # dataArr2,labelArr2=ann.loadDataSet('final_eigen02.txt')
+# # dataMat1.extend(dataArr2)
+# # labelMat.extend(labelArr2)
+# #==============================================================================
+# labelMat=np.array(labelMat)
+#
+#
+# data01=ann.preprocess(dataMat1)
+# dataMat=ann.preprocess1(data01)
+# #dataMat=np.array(data01)
+# #dataMat=np.array(dataMat1)
+#
+# #dataMat=dataMat[:,0:44]
+########全部的特征值###################################3
 
-dataMat1,labelMat=ann.loadDataSet('final_shuffle.txt')
-#==============================================================================
-# dataArr2,labelArr2=ann.loadDataSet('final_eigen02.txt')
-# dataMat1.extend(dataArr2)
-# labelMat.extend(labelArr2)
-#==============================================================================
-labelMat=np.array(labelMat)
+###################遗传算法降维后的特征值#################
+# dataset=pd.read_csv("eigen_MIV.csv")
+# dataset=np.array(dataset)
+# dataMat=dataset[:, 0:34]
+# labelMat=dataset[:,34]
 
 
-data01=ann.preprocess(dataMat1)
-dataMat=ann.preprocess1(data01)
-#dataMat=np.array(data01)
-#dataMat=np.array(dataMat1)
+###################遗传算法降维后的特征值#################
 
-#dataMat=dataMat[:,0:44]
+import  global_list as gl
+dataset=gl.dataSet
+dataset=np.array(dataset)
+dataMat=dataset[:,0:78]
+labelMat=dataset[:,78]
 
-for i in range(len(labelMat)):
-    if labelMat[i]==2:
-        labelMat[i]=-1;#adaboost只能区分-1和1的标签
+# for i in range(len(labelMat)):
+#     if labelMat[i]==2:
+#         labelMat[i]=-1;#adaboost只能区分-1和1的标签
 
 evaluate_train=[]
 evaluate_test=[]
 prenum_train=[]
 prenum_test=[]
 
-skf=StratifiedKFold(n_splits=10)
-for train,test in skf.split(dataMat,labelMat):
-#==============================================================================
-# skf=StratifiedShuffleSplit(n_splits=10)
-# for train,test in skf.split(dataMat,labelMat):
-#==============================================================================
-    print("%s %s" % (train,test))
-    train_in=dataMat[train]
+skf = StratifiedKFold(n_splits=10)
+for train, test in skf.split(dataMat, labelMat):
+    print("%s %s" % (train, test))
+    train_in = dataMat[train]
     test_in=dataMat[test]
     train_out=labelMat[train]
     test_out=labelMat[test]
-    train_predict,test_predict,proba_train,proba_test, coef_test=ann.ANNClassifier(train_in,train_out,test_in)
+    train_in, train_out = RandomUnderSampler().fit_sample(train_in, train_out)
+    train_predict,test_predict,proba_train,proba_test=ann.ANNClassifier(train_in,train_out,test_in)
     proba_train=proba_train[:,1]
     proba_test=proba_test[:,1]
     test1,test2=ann.evaluatemodel(train_out,train_predict,proba_train)#test model with trainset

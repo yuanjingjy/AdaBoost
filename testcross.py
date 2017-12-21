@@ -8,6 +8,9 @@ import adaboost
 import numpy as np
 from sklearn.model_selection import StratifiedShuffleSplit
 from sklearn.model_selection import StratifiedKFold
+import  pandas as pd
+from imblearn.under_sampling import RandomUnderSampler
+
 
 
 #reset() 
@@ -23,30 +26,41 @@ AUCaaa=[];
 fp_train=[];
 fp_test=[];
 AUCtest=[]
+#
+# import  pandas as  pd#python data analysis
+# import  sklearn.feature_selection as sfs
+#
+# pandas_data=pd.read_excel('sql_eigen.xlsx',header=None)
+# sql_eigen=pandas_data.fillna(np.mean(pandas_data))
+#
+# data =sql_eigen.iloc[:,0:85]
+# data.iloc[:,84][data.iloc[:,84]>200]=91
+# label=sql_eigen.iloc[:,86]
+#
+# dataMat1=np.array(data)
+# labelMat=np.array(label)
+#
+# # data01 = ann.preprocess(dataMat1)
+# # dataMat = ann.preprocess1(data01)
+# dataMat=dataMat1
+# labelArr=labelMat
 
-import  pandas as  pd#python data analysis
-import  sklearn.feature_selection as sfs
+# dataset=pd.read_csv("eigen_GA.csv")
+# dataset=np.array(dataset)
+# dataArr=dataset[:, 0:35]
+# labelArr=dataset[:,35]
 
-pandas_data=pd.read_excel('sql_eigen.xlsx',header=None)
-sql_eigen=pandas_data.fillna(np.mean(pandas_data))
-
-data =sql_eigen.iloc[:,0:85]
-data.iloc[:,84][data.iloc[:,84]>200]=91
-label=sql_eigen.iloc[:,86]
-
-dataMat1=np.array(data)
-labelMat=np.array(label)
-
-# data01 = ann.preprocess(dataMat1)
-# dataMat = ann.preprocess1(data01)
-dataMat=dataMat1
-labelArr=labelMat
+import  global_list as gl
+dataset=gl.data2
+dataset=np.array(dataset)
+dataArr=dataset[:,0:78]
+labelArr=dataset[:,78]
 
 for i in range(len(labelArr)):
     if labelArr[i]==0:
         labelArr[i]=-1;#adaboost只能区分-1和1的标签
 
-dataArr=dataMat
+# dataArr=dataMat
 label=labelArr
 #eigen=eigen[:,0:77]
 #eigen=eigen[:,0:44]
@@ -56,12 +70,13 @@ label=labelArr
 #==============================================================================
 skf=StratifiedKFold(n_splits=10)
 for train,test in skf.split(dataArr,labelArr):
-    print("%s %s" % (train, test))
+    # print("%s %s" % (train, test))
     train.tolist();
-    train_in=eigen[train];
-    test_in=eigen[test];
+    train_in=dataArr[train];
+    test_in=dataArr[test];
     train_out=label[train];
     test_out=label[test];
+    # train_in, train_out = RandomUnderSampler().fit_sample(train_in, train_out)
     classifierArray,aggClassEst=adaboost.adaBoostTrainDS(train_in,train_out,100);            
     prediction_train,prob_train=adaboost.adaClassify(train_in,classifierArray);#测试训练集
     prediction_test,prob_test=adaboost.adaClassify(test_in,classifierArray);#测试测试集
@@ -92,4 +107,5 @@ evaluate_train=np.array(evaluate_train);
 evaluate_test=np.array(evaluate_test);
 fp_train=np.array(fp_train);
 fp_test=np.array(fp_test);
-    
+AUC=np.mean(AUCtest)
+print("test")

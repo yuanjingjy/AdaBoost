@@ -104,6 +104,7 @@ score =[]
 # data_mat=dataMat(select_feature)
 #######################################################
 
+
 skf = StratifiedKFold(n_splits=10)
 for train, test in skf.split(dataMat, labelMat):
     # ==============================================================================
