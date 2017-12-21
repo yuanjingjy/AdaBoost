@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd9ef12f-d58e-4622-b9cb-db9b5b68d9d1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myown/test_ga.ipynb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myown/ann.py" afterPath="$PROJECT_DIR$/myown/ann.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myown/featureselection.py" afterPath="$PROJECT_DIR$/myown/featureselection.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myown/testann.py" afterPath="$PROJECT_DIR$/myown/testann.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcross.py" afterPath="$PROJECT_DIR$/testcross.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,13 +28,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testann.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="testann.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myown/testann.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="90" column="25" lean-forward="true" selection-start-line="90" selection-start-column="25" selection-end-line="90" selection-end-column="25" />
+            <state relative-caret-position="111">
+              <caret line="89" column="48" lean-forward="false" selection-start-line="89" selection-start-column="48" selection-end-line="89" selection-end-column="48" />
               <folding>
                 <element signature="e#84#94#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1204codetest.py" pinned="false" current-in-tab="true">
+        <entry file="file://H:/1204codetest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#20#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -404,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1512976221521</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="基于sklearn的特征选择方法&#10;验证RFE和SVM选择出一个变量时结果如何">
+      <created>1513849739824</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1513849739824</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -543,13 +557,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/myown/featureselection.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/adaboost.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
@@ -877,10 +884,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myown/testann.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="90" column="25" lean-forward="true" selection-start-line="90" selection-start-column="25" selection-end-line="90" selection-end-column="25" />
+        <state relative-caret-position="111">
+          <caret line="89" column="48" lean-forward="false" selection-start-line="89" selection-start-column="48" selection-end-line="89" selection-end-column="48" />
           <folding>
             <element signature="e#84#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://H:/1204codetest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
