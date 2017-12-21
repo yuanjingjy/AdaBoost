@@ -2,7 +2,7 @@
 """
 Created on Wed Sep  6 08:42:39 2017
 
-@author: John
+@author: YJ
 """
 #i have used the whole night to learn how to work with github
 
@@ -29,11 +29,11 @@ data2=data.drop(['hr_cov', 'bpsys_cov', 'bpdia_cov', 'bpmean_cov', 'pulse_cov', 
 label=sql_eigen['class_label']
 
 dataMat1=np.array(data2)
-labelMat=np.array(label)
+labelMat=np.array(label)##the final label
 
 data01 = ann.preprocess(dataMat1)
 # dataMat = ann.preprocess1(data01)
-dataMat=np.array(data01)
+dataMat=np.array(data01)## The final dataset
 
 #dataandlabel=pd.DataFrame(labelMat,columns=['label'])
 #dataandlabel.to_csv('F:/label.csv', encoding='utf-8', index=True)
@@ -46,6 +46,75 @@ evaluate_test = []
 prenum_train = []
 prenum_test  = []
 weight=[]
+######################################################
+#########select features with construct regressor model for each feature#######
+from sklearn.linear_model import RandomizedLasso
+from sklearn.linear_model import RandomizedLogisticRegression
+
+X = dataMat
+Y = labelMat
+names = data2.keys()
+
+rlasso = RandomizedLogisticRegression()
+rlasso.fit(X, Y)
+
+print ("Features sorted by their score:")
+
+scores1=rlasso.scores_
+compareeigen=pd.DataFrame([scores1],index=['score'],columns=data2.keys())
+
+sorteigen=compareeigen.sort_values(by='score',ascending=False,axis=1)
+select_fea=sorteigen[: 1:29]
+names1=select_fea.keys()
+sorteigen.to_csv('D:/stable.csv', encoding='utf-8', index=True)
+
+print('test')
+######################################################
+#########select features with construct regressor model for each feature#####################
+from sklearn.metrics import accuracy_score
+from collections import defaultdict
+clf = MLPClassifier(hidden_layer_sizes=(10,), activation='tanh',
+                         shuffle=True, solver='sgd', alpha=1e-6, batch_size=1,
+                         learning_rate='adaptive')
+scores=[]
+
+skf = StratifiedKFold(n_splits=10)
+for train, test in skf.split(dataMat, labelMat):
+    # ==============================================================================
+    # skf=StratifiedShuffleSplit(n_splits=10)
+    # for train,test in skf.split(dataMat,labelMat):
+    # ==============================================================================
+    print("%s %s" % (train, test))
+    train_in = dataMat[train]
+    test_in = dataMat[test]
+    train_out = labelMat[train]
+    test_out = labelMat[test]
+    clf.fit(train_in, train_out)
+    acc=clf.score(test_in,test_out)
+    score = []
+    for i in range(dataMat.shape[1]):
+        x_t=test_in;
+        np.random.shuffle(x_t[:,i])
+        shuff_acc=clf.score(x_t,test_out)
+        score.append((acc-shuff_acc)/acc)
+    scores.append(score)
+scores=np.array(scores)
+scores=np.mean(scores,axis=0)
+compareeigen=pd.DataFrame([scores],index=['score'],columns=data2.keys())
+
+sorteigen=compareeigen.sort_values(by='score',ascending=False,axis=1)
+
+sorteigen.to_csv('D:/each.csv', encoding='utf-8', index=True)
+
+svmscore = pd.DataFrame(scores)
+svmscore = svmscore.sort_values(by='score', ascending=False, axis=1)
+svmscore.to_csv('D:/anntest.csv', encoding='utf-8', index=True)
+print(test)
+
+
+
+
+
 ######################################################
 #########select features with selectKBest######################
 # selectmodel=sfs.SelectKBest(sfs.mutual_info_classif)
@@ -147,7 +216,9 @@ prenum_test = np.array(prenum_test)
 
 evaluate_train_mean = np.mean(evaluate_test, axis=0)
 # np.array(test_important)
-svmscore = pd.DataFrame(weight, columns=data2.keys())
-svmscore.to_csv('F:/svmtest.csv', encoding='utf-8', index=True)
+weight=np.array(weight)
+svmscore = pd.DataFrame(weights, index=['score'],columns=data2.keys())
+svmscore=svmscore.sort_values(by='score',ascending=False,axis=1)
+svmscore.to_csv('D:/svmtest.csv', encoding='utf-8', index=True)
 weight=np.array(weight)
 print("view the variable")
