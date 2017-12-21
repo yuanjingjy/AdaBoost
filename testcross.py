@@ -50,11 +50,12 @@ AUCtest=[]
 # dataArr=dataset[:, 0:35]
 # labelArr=dataset[:,35]
 
-import  global_list as gl
-dataset=gl.data2
+dataset=pd.read_csv("LR9.csv")
 dataset=np.array(dataset)
-dataArr=dataset[:,0:78]
-labelArr=dataset[:,78]
+dataArr=dataset[:, 0:9]
+# dataMat=ann.preprocess(dataMat)
+# dataMat=ann.preprocess1(dataMat)
+labelArr=dataset[:,9]
 
 for i in range(len(labelArr)):
     if labelArr[i]==0:

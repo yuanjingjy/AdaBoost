@@ -17,23 +17,29 @@ import logRegres as LR
 import numpy as np
 from sklearn.model_selection import StratifiedShuffleSplit
 from sklearn.model_selection import StratifiedKFold
+from imblearn.under_sampling import RandomUnderSampler
 
 import  pandas as  pd#python data analysis
 import  sklearn.feature_selection as sfs
 
-pandas_data=pd.read_excel('sql_eigen.xlsx',header=None)
-sql_eigen=pandas_data.fillna(np.mean(pandas_data))
+# pandas_data=pd.read_excel('sql_eigen.xlsx',header=None)
+# sql_eigen=pandas_data.fillna(np.mean(pandas_data))
+#
+# data =sql_eigen.iloc[:,0:85]
+# data.iloc[:,84][data.iloc[:,84]>200]=91
+# label=sql_eigen.iloc[:,86]
+#
+# dataMat1=np.array(data)
+# labelMat=np.array(label)
+#
+# data01 = ann.preprocess(dataMat1)
+# # dataMat = ann.preprocess1(data01)
+# dataMat=np.array(data01)
 
-data =sql_eigen.iloc[:,0:85]
-data.iloc[:,84][data.iloc[:,84]>200]=91
-label=sql_eigen.iloc[:,86]
-
-dataMat1=np.array(data)
-labelMat=np.array(label)
-
-data01 = ann.preprocess(dataMat1)
-# dataMat = ann.preprocess1(data01)
-dataMat=np.array(data01)
+dataset=pd.read_csv("LR9.csv")
+dataset=np.array(dataset)
+dataMat=dataset[:, 0:9]
+labelMat=dataset[:,9]
 
 for i in range(len(labelMat)):
     if labelMat[i] == -1:
@@ -44,21 +50,8 @@ evaluate_test = []
 prenum_train = []
 prenum_test  = []
 
-clf1=MLPClassifier(hidden_layer_sizes=(90,), activation='tanh',
-                      shuffle=True,solver='sgd',alpha=1e-6,batch_size=5,
-                      learning_rate='adaptive')
-
-clf=svm.SVC(C=2,kernel='linear',gamma='auto',shrinking=True,probability=True,
-             tol=0.001,cache_size=200,class_weight='balanced',verbose=False,
-             max_iter=-1,decision_function_shape='ovr',random_state=None)
-#
-
-dataMat_new=sfs.SelectKBest(sfs.chi2,k=50).fit_transform(dataMat,labelMat)
-dataMat=dataMat_new
-
-
-num_sample=np.shape(dataMat1)[0]
-addones=np.ones((num_sample,1))
+# num_sample=np.shape(dataMat1)[0]
+addones=np.ones((919,1))
 dataMat=np.c_[addones,dataMat]
 data01=ann.preprocess(dataMat)
 dataMat1=ann.preprocess1(data01)
@@ -89,7 +82,7 @@ for train,test in skf.split(dataMat,labelMat):
     test_in=dataMat[test]
     train_out=labelMat[train]
     test_out=labelMat[test]
-    
+    # train_in, train_out = RandomUnderSampler().fit_sample(train_in, train_out)
     trainWeights=LR.stocGradAscent1(train_in,train_out,200)
     
     len_train=np.shape(train_in)[0]

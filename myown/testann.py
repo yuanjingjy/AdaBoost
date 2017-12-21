@@ -30,19 +30,21 @@ from sklearn.model_selection import StratifiedKFold
 ########全部的特征值###################################3
 
 ###################遗传算法降维后的特征值#################
-# dataset=pd.read_csv("eigen_MIV.csv")
-# dataset=np.array(dataset)
-# dataMat=dataset[:, 0:34]
-# labelMat=dataset[:,34]
+dataset=pd.read_csv("LR9.csv")
+dataset=np.array(dataset)
+dataMat=dataset[:, 0:9]
+dataMat=ann.preprocess(dataMat)
+dataMat=ann.preprocess1(dataMat)
+labelMat=dataset[:,9]
 
 
 ###################遗传算法降维后的特征值#################
 
-import  global_list as gl
-dataset=gl.dataSet
-dataset=np.array(dataset)
-dataMat=dataset[:,0:78]
-labelMat=dataset[:,78]
+# import  global_list as gl
+# dataset=gl.dataSet
+# dataset=np.array(dataset)
+# dataMat=dataset[:,0:78]
+# labelMat=dataset[:,78]
 
 # for i in range(len(labelMat)):
 #     if labelMat[i]==2:
