@@ -36,14 +36,19 @@ import  sklearn.feature_selection as sfs
 # # dataMat = ann.preprocess1(data01)
 # dataMat=np.array(data01)
 
-dataset=pd.read_csv("LR9.csv")
-dataset=np.array(dataset)
-dataMat=dataset[:, 0:9]
-labelMat=dataset[:,9]
+# dataset=pd.read_csv("LR9.csv")
+# dataset=np.array(dataset)
+# dataMat=dataset[:, 0:9]
+# labelMat=dataset[:,9]
 
-for i in range(len(labelMat)):
-    if labelMat[i] == -1:
-        labelMat[i] = 0;  # adaboost只能区分-1和1的标签
+dataset=pd.read_csv("eigen_GA.csv")
+dataset=np.array(dataset)
+dataMat=dataset[:, 0:35]
+labelMat=dataset[:,35]
+
+# for i in range(len(labelMat)):
+#     if labelMat[i] == -1:
+#         labelMat[i] = 0;  # adaboost只能区分-1和1的标签
 
 evaluate_train = []
 evaluate_test = []
