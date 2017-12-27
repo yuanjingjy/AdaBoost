@@ -36,15 +36,16 @@ import  sklearn.feature_selection as sfs
 # # dataMat = ann.preprocess1(data01)
 # dataMat=np.array(data01)
 
-# dataset=pd.read_csv("LR9.csv")
-# dataset=np.array(dataset)
-# dataMat=dataset[:, 0:9]
-# labelMat=dataset[:,9]
-
-dataset=pd.read_csv("eigen_GA.csv")
+dataset=pd.read_csv("LR9.csv")
+dataset=dataset.fillna(np.mean(dataset))
 dataset=np.array(dataset)
-dataMat=dataset[:, 0:35]
-labelMat=dataset[:,35]
+dataMat=dataset[:, 0:10]
+labelMat=dataset[:,10]
+
+# dataset=pd.read_csv("eigen_GA.csv")
+# dataset=np.array(dataset)
+# dataMat=dataset[:, 0:35]
+# labelMat=dataset[:,35]
 
 # for i in range(len(labelMat)):
 #     if labelMat[i] == -1:

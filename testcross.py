@@ -51,11 +51,12 @@ AUCtest=[]
 # labelArr=dataset[:,35]
 
 dataset=pd.read_csv("LR9.csv")
+dataset=dataset.fillna(np.mean(dataset))
 dataset=np.array(dataset)
-dataArr=dataset[:, 0:9]
+dataArr=dataset[:, 0:10]
 # dataMat=ann.preprocess(dataMat)
 # dataMat=ann.preprocess1(dataMat)
-labelArr=dataset[:,9]
+labelArr=dataset[:,10]
 
 for i in range(len(labelArr)):
     if labelArr[i]==0:

@@ -31,11 +31,12 @@ from sklearn.model_selection import StratifiedKFold
 
 ###################遗传算法降维后的特征值#################
 dataset=pd.read_csv("LR9.csv")
+dataset=dataset.fillna(np.mean(dataset))
 dataset=np.array(dataset)
-dataMat=dataset[:, 0:9]
+dataMat=dataset[:, 0:10]
 dataMat=ann.preprocess(dataMat)
 dataMat=ann.preprocess1(dataMat)
-labelMat=dataset[:,9]
+labelMat=dataset[:,10]
 
 
 ###################遗传算法降维后的特征值#################
