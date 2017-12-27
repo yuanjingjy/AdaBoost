@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd9ef12f-d58e-4622-b9cb-db9b5b68d9d1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myown/Gridsearch.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ann.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eigen_GA.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eigen_MIV.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/global_list.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LR9.csv" afterPath="$PROJECT_DIR$/LR9.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myown/LR9.csv" afterPath="$PROJECT_DIR$/myown/LR9.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myown/featureselection.ipynb" afterPath="$PROJECT_DIR$/myown/featureselection.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myown/testLR.py" afterPath="$PROJECT_DIR$/myown/testLR.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myown/testann.py" afterPath="$PROJECT_DIR$/myown/testann.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myown/testpandas.ipynb" afterPath="$PROJECT_DIR$/myown/testpandas.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcross.py" afterPath="$PROJECT_DIR$/testcross.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,10 +44,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testcross.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="testcross.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testcross.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
+            <state relative-caret-position="234">
               <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
               <folding />
             </state>
@@ -68,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ann.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ann.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myown/ann.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
+            <state relative-caret-position="-301">
               <caret line="41" column="3" lean-forward="false" selection-start-line="41" selection-start-column="3" selection-end-line="44" selection-end-column="47" />
               <folding>
                 <element signature="e#84#102#0" expanded="true" />
@@ -145,9 +141,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-60" />
-    <option name="y" value="5" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="234" />
+    <option name="y" value="135" />
     <option name="width" value="1620" />
     <option name="height" value="821" />
   </component>
@@ -190,6 +186,11 @@
             <path>
               <item name="AdaBoost" type="b2602c69:ProjectViewProjectNode" />
               <item name="AdaBoost" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AdaBoost" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AdaBoost" type="462c0819:PsiDirectoryNode" />
+              <item name="myown" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -424,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1513920550925</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="I have used the whole night to learn how to use github">
+      <created>1514363143723</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1514363143723</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -438,9 +446,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-60" y="5" width="1620" height="821" extended-state="0" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23126616" sideWeight="0.4934334" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23251295" sideWeight="0.4934334" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33614627" sideWeight="0.49481866" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29817158" sideWeight="0.2642487" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.31504923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -449,8 +458,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2792363" sideWeight="0.6353627" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23251295" sideWeight="0.5065666" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37957317" sideWeight="0.7357513" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.76808786" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35021096" sideWeight="0.7357513" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7681347" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -882,16 +891,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myown/ann.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="41" column="3" lean-forward="false" selection-start-line="41" selection-start-column="3" selection-end-line="44" selection-end-column="47" />
-          <folding>
-            <element signature="e#84#102#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myown/testLR.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
@@ -914,9 +913,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testcross.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
+        <state relative-caret-position="234">
           <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myown/ann.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-301">
+          <caret line="41" column="3" lean-forward="false" selection-start-line="41" selection-start-column="3" selection-end-line="44" selection-end-column="47" />
+          <folding>
+            <element signature="e#84#102#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
