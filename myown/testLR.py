@@ -20,31 +20,28 @@ from sklearn.model_selection import StratifiedKFold
 from imblearn.under_sampling import RandomUnderSampler
 
 import  pandas as  pd#python data analysis
-import  sklearn.feature_selection as sfs
 
-# pandas_data=pd.read_excel('sql_eigen.xlsx',header=None)
-# sql_eigen=pandas_data.fillna(np.mean(pandas_data))
-#
-# data =sql_eigen.iloc[:,0:85]
-# data.iloc[:,84][data.iloc[:,84]>200]=91
-# label=sql_eigen.iloc[:,86]
-#
-# dataMat1=np.array(data)
-# labelMat=np.array(label)
-#
-# data01 = ann.preprocess(dataMat1)
-# # dataMat = ann.preprocess1(data01)
-# dataMat=np.array(data01)
-
-# dataset=pd.read_csv("LR9.csv")
+# #####加载全部78个特征值
+# import  global_list as gl
+# dataset=gl.dataSet
 # dataset=np.array(dataset)
-# dataMat=dataset[:, 0:9]
-# labelMat=dataset[:,9]
+# dataMat=dataset[:,0:78]
+# labelMat=dataset[:,78]
 
-dataset=pd.read_csv("eigen_GA.csv")
+###################遗传算法降维后的特征值#################
+dataset=pd.read_csv("LR9.csv")
+dataset=dataset.fillna(np.mean(dataset))
 dataset=np.array(dataset)
-dataMat=dataset[:, 0:35]
-labelMat=dataset[:,35]
+dataMat=dataset[:, 0:10]
+dataMat=ann.preprocess(dataMat)
+dataMat=ann.preprocess1(dataMat)
+labelMat=dataset[:,10]
+
+# # ######加载遗传算法降维后的35个特征值（MIV降维后的时eigen_MIV，34个），归一化之后的
+# dataset=pd.read_csv("eigen_GA.csv")
+# dataset=np.array(dataset)
+# dataMat=dataset[:, 0:35]
+# labelMat=dataset[:,35]
 
 # for i in range(len(labelMat)):
 #     if labelMat[i] == -1:

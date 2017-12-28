@@ -6,14 +6,8 @@ Created on Fri Aug 25 16:09:36 2017
 """
 import adaboost
 import numpy as np
-from sklearn.model_selection import StratifiedShuffleSplit
 from sklearn.model_selection import StratifiedKFold
 import  pandas as pd
-from imblearn.under_sampling import RandomUnderSampler
-
-
-
-#reset() 
 
 train_in=[];
 test_in=[];
@@ -26,36 +20,27 @@ AUCaaa=[];
 fp_train=[];
 fp_test=[];
 AUCtest=[]
-#
-# import  pandas as  pd#python data analysis
-# import  sklearn.feature_selection as sfs
-#
-# pandas_data=pd.read_excel('sql_eigen.xlsx',header=None)
-# sql_eigen=pandas_data.fillna(np.mean(pandas_data))
-#
-# data =sql_eigen.iloc[:,0:85]
-# data.iloc[:,84][data.iloc[:,84]>200]=91
-# label=sql_eigen.iloc[:,86]
-#
-# dataMat1=np.array(data)
-# labelMat=np.array(label)
-#
-# # data01 = ann.preprocess(dataMat1)
-# # dataMat = ann.preprocess1(data01)
-# dataMat=dataMat1
-# labelArr=labelMat
 
+######加载全部78个特征值
+# import  global_list as gl
+# dataset=gl.dataSet
+# dataset=np.array(dataset)
+# dataArr=dataset[:,0:78]
+# labelArr=dataset[:,78]
+
+# ######加载遗传算法降维后的35个特征值（MIV降维后的时eigen_MIV，34个）
 # dataset=pd.read_csv("eigen_GA.csv")
 # dataset=np.array(dataset)
 # dataArr=dataset[:, 0:35]
 # labelArr=dataset[:,35]
 
+#######加载逻辑回归降维后的10个特征值
 dataset=pd.read_csv("LR9.csv")
 dataset=np.array(dataset)
-dataArr=dataset[:, 0:9]
+dataArr=dataset[:, 0:10]
 # dataMat=ann.preprocess(dataMat)
 # dataMat=ann.preprocess1(dataMat)
-labelArr=dataset[:,9]
+labelArr=dataset[:,10]
 
 for i in range(len(labelArr)):
     if labelArr[i]==0:
@@ -63,12 +48,6 @@ for i in range(len(labelArr)):
 
 # dataArr=dataMat
 label=labelArr
-#eigen=eigen[:,0:77]
-#eigen=eigen[:,0:44]
-#==============================================================================
-# skf=StratifiedShuffleSplit(n_splits=10)
-# for train,test in skf.split(dataArr,labelArr):
-#==============================================================================
 skf=StratifiedKFold(n_splits=10)
 for train,test in skf.split(dataArr,labelArr):
     # print("%s %s" % (train, test))

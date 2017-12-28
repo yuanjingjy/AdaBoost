@@ -4,8 +4,12 @@ Created on Wed Sep  6 08:42:39 2017
 
 @author: YJ
 """
-#i have used the whole night to learn how to work with github
 
+##该脚本是对特征选择方法的实验过程，其中应用的方法包括：
+#1.稳定性方法，基于L1正则化
+#2.基于平均精确度的方法，将每个特征值的数值随机打乱，看对预测结果的影响
+#3.基于卡方、互信息等方法的selectKBest方法，及其重要性排序、写入csv文件
+#4.RFE方法，递归特征减小法，并实验了选择不同数目的变量对预测结果的影响
 import ann
 import numpy as np
 from sklearn.model_selection import StratifiedShuffleSplit
@@ -47,7 +51,7 @@ prenum_train = []
 prenum_test  = []
 weight=[]
 ######################################################
-#########select features with construct regressor model for each feature#######
+#########较稳定的特征选择方法，嵌入式，正则化#######
 from sklearn.linear_model import RandomizedLasso
 from sklearn.linear_model import RandomizedLogisticRegression
 
@@ -70,7 +74,7 @@ sorteigen.to_csv('D:/stable.csv', encoding='utf-8', index=True)
 
 print('test')
 ######################################################
-#########select features with construct regressor model for each feature#####################
+#########利用神经网络，依次将各个特征值随机化，看对预测结果的影响#####################
 from sklearn.metrics import accuracy_score
 from collections import defaultdict
 clf = MLPClassifier(hidden_layer_sizes=(10,), activation='tanh',
@@ -94,7 +98,7 @@ for train, test in skf.split(dataMat, labelMat):
     score = []
     for i in range(dataMat.shape[1]):
         x_t=test_in;
-        np.random.shuffle(x_t[:,i])
+        np.random.shuffle(x_t[:,i])#将某一特征的值打乱
         shuff_acc=clf.score(x_t,test_out)
         score.append((acc-shuff_acc)/acc)
     scores.append(score)
