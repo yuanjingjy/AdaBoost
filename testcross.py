@@ -36,6 +36,7 @@ AUCtest=[]
 
 #######加载逻辑回归降维后的10个特征值
 dataset=pd.read_csv("LR9.csv")
+dataset=dataset.fillna(np.mean(dataset))
 dataset=np.array(dataset)
 dataArr=dataset[:, 0:10]
 # dataMat=ann.preprocess(dataMat)
