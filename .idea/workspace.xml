@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd9ef12f-d58e-4622-b9cb-db9b5b68d9d1" name="Default" comment="I have used the whole night to learn how to use github">
+    <list default="true" id="dd9ef12f-d58e-4622-b9cb-db9b5b68d9d1" name="Default" comment="删减没用的代码">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,8 +54,8 @@
       <file leaf-file-name="testLR.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myown/testLR.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="795">
+              <caret line="58" column="32" lean-forward="true" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
               <folding>
                 <element signature="e#177#187#0" expanded="true" />
               </folding>
@@ -163,11 +163,6 @@
               <item name="机器学习算法：AdaBosot、LR、ANN、SVM" type="b2602c69:ProjectViewProjectNode" />
               <item name="机器学习算法：AdaBosot、LR、ANN、SVM" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="机器学习算法：AdaBosot、LR、ANN、SVM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="机器学习算法：AdaBosot、LR、ANN、SVM" type="462c0819:PsiDirectoryNode" />
-              <item name="myown" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -177,7 +172,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GA" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -435,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1514446863618</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="删减没用的代码">
+      <created>1514448977022</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1514448977022</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -450,9 +452,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29404145" sideWeight="0.4934334" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29404145" sideWeight="0.4934334" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33614627" sideWeight="0.49481866" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29817158" sideWeight="0.2642487" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.31504923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -528,7 +529,8 @@
     </ignored-roots>
     <MESSAGE value="基于sklearn的特征选择方法&#10;验证RFE和SVM选择出一个变量时结果如何" />
     <MESSAGE value="I have used the whole night to learn how to use github" />
-    <option name="LAST_COMMIT_MESSAGE" value="I have used the whole night to learn how to use github" />
+    <MESSAGE value="删减没用的代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="删减没用的代码" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -877,8 +879,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myown/testLR.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="795">
+          <caret line="58" column="32" lean-forward="true" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
           <folding>
             <element signature="e#177#187#0" expanded="true" />
           </folding>
