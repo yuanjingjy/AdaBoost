@@ -13,13 +13,9 @@ dataMat,labelMat=ann.loadDataSet('final_data.txt')
 dataset=np.c_[dataMat,labelMat]
 np.array(dataset)
 
-dataset1=dataset[:,0:11]
-dataset2=dataset[:,44:84]
+# dataset1=dataset[:,0:11]
+# dataset2=dataset[:,44:84]
 
-#==============================================================================
-# dataset1=dataset[0:406,:]
-# dataset2=dataset[513:919,:]
-#==============================================================================
 
 dataset=np.c_[dataset1,dataset2]
 
