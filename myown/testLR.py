@@ -21,21 +21,21 @@ from imblearn.under_sampling import RandomUnderSampler
 
 import  pandas as  pd#python data analysis
 
-# #####加载全部78个特征值
-# import  global_list as gl
-# dataset=gl.dataSet
-# dataset=np.array(dataset)
-# dataMat=dataset[:,0:78]
-# labelMat=dataset[:,78]
-
-###################遗传算法降维后的特征值#################
-dataset=pd.read_csv("LR9.csv")
-dataset=dataset.fillna(np.mean(dataset))
+#####加载全部78个特征值
+import  global_list as gl
+dataset=gl.dataSet
 dataset=np.array(dataset)
-dataMat=dataset[:, 0:10]
-dataMat=ann.preprocess(dataMat)
-dataMat=ann.preprocess1(dataMat)
-labelMat=dataset[:,10]
+dataMat=dataset[:,0:78]
+labelMat=dataset[:,78]
+
+# ###################遗传算法降维后的特征值#################
+# dataset=pd.read_csv("LR9.csv")
+# dataset=dataset.fillna(np.mean(dataset))
+# dataset=np.array(dataset)
+# dataMat=dataset[:, 0:10]
+# dataMat=ann.preprocess(dataMat)
+# dataMat=ann.preprocess1(dataMat)
+# labelMat=dataset[:,10]
 
 # # ######加载遗传算法降维后的35个特征值（MIV降维后的时eigen_MIV，34个），归一化之后的
 # dataset=pd.read_csv("eigen_GA.csv")

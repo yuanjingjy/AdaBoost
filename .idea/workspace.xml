@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dd9ef12f-d58e-4622-b9cb-db9b5b68d9d1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myown/shuffle_sample.py" afterPath="$PROJECT_DIR$/myown/shuffle_sample.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myown/testLR.py" afterPath="$PROJECT_DIR$/myown/testLR.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,21 +44,9 @@
       <file leaf-file-name="testann.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myown/testann.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+            <state relative-caret-position="196">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testcross.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testcross.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2548">
-              <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-              <folding>
-                <marker date="1514512569548" expanded="true" signature="1112:2164" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -84,20 +72,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testLR.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="testLR.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myown/testLR.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="896">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding>
-                <element signature="e#177#187#0" expanded="true" />
-                <marker date="1514512569482" expanded="true" signature="905:1134" ph="..." />
-                <marker date="1514512569482" expanded="true" signature="1386:1700" ph="..." />
-                <marker date="1514512569482" expanded="true" signature="1848:3397" ph="..." />
-                <marker date="1514512569482" expanded="true" signature="1849:2099" ph="..." />
-                <marker date="1514512569482" expanded="true" signature="2529:2755" ph="..." />
-                <marker date="1514512569482" expanded="true" signature="2841:3075" ph="..." />
-              </folding>
+            <state relative-caret-position="50">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="28" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -122,12 +102,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shuffle_sample.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="shuffle_sample.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myown/shuffle_sample.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="414">
               <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.ipynb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myown/test.ipynb">
+          <provider selected="true" editor-type-id="ipnb-editor">
+            <state>
+              <selected id="1" />
             </state>
           </provider>
         </entry>
@@ -155,8 +144,6 @@
         <option value="$PROJECT_DIR$/myown/test_ga.ipynb" />
         <option value="$PROJECT_DIR$/myown/testpandas.ipynb" />
         <option value="$PROJECT_DIR$/myown/Gridsearch.py" />
-        <option value="$PROJECT_DIR$/myown/testLR.py" />
-        <option value="$PROJECT_DIR$/myown/testann.py" />
         <option value="$PROJECT_DIR$/testcross.py" />
         <option value="$PROJECT_DIR$/myown/ann.py" />
         <option value="$PROJECT_DIR$/myown/featureselection.ipynb" />
@@ -164,6 +151,8 @@
         <option value="$PROJECT_DIR$/myown/global_list.py" />
         <option value="$PROJECT_DIR$/myown/logRegres.py" />
         <option value="$PROJECT_DIR$/myown/shuffle_sample.py" />
+        <option value="$PROJECT_DIR$/myown/testann.py" />
+        <option value="$PROJECT_DIR$/myown/testLR.py" />
       </list>
     </option>
   </component>
@@ -694,7 +683,21 @@
       <option name="project" value="LOCAL" />
       <updated>1514514277101</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="各样本顺序打乱，permutation函数">
+      <created>1514514292913</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1514514292913</updated>
+    </task>
+    <task id="LOCAL-00016" summary="神经网络的测试程序">
+      <created>1514514339861</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1514514339861</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -793,14 +796,15 @@
     <MESSAGE value="用来提取78个特征值" />
     <MESSAGE value="逻辑回归程序实现过程" />
     <MESSAGE value="各样本顺序打乱，permutation函数" />
-    <option name="LAST_COMMIT_MESSAGE" value="各样本顺序打乱，permutation函数" />
+    <MESSAGE value="神经网络的测试程序" />
+    <option name="LAST_COMMIT_MESSAGE" value="神经网络的测试程序" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/myown/testann.py</url>
-          <line>90</line>
+          <line>91</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1005,13 +1009,6 @@
     <entry file="file://E:/Anaconda/Lib/site-packages/sklearn/neural_network/multilayer_perceptron.py" />
     <entry file="file://$PROJECT_DIR$/myown/test1.ipynb" />
     <entry file="file://E:/Anaconda/Lib/site-packages/sklearn/model_selection/_split.py" />
-    <entry file="file://$PROJECT_DIR$/myown/test.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myown/sql_eigen.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1110,34 +1107,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myown/testLR.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="896">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="e#177#187#0" expanded="true" />
-            <marker date="1514512569482" expanded="true" signature="905:1134" ph="..." />
-            <marker date="1514512569482" expanded="true" signature="1386:1700" ph="..." />
-            <marker date="1514512569482" expanded="true" signature="1848:3397" ph="..." />
-            <marker date="1514512569482" expanded="true" signature="1849:2099" ph="..." />
-            <marker date="1514512569482" expanded="true" signature="2529:2755" ph="..." />
-            <marker date="1514512569482" expanded="true" signature="2841:3075" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myown/testpandas.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
           <selected id="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myown/testann.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1198,6 +1171,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myown/test.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myown/testann.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myown/testLR.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="28" selection-end-column="22" />
           <folding />
         </state>
       </provider>
