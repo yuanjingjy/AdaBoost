@@ -21,6 +21,7 @@ fp_train=[];
 fp_test=[];
 AUCtest=[]
 
+###
 ######加载全部78个特征值
 # import  global_list as gl
 # dataset=gl.dataSet
