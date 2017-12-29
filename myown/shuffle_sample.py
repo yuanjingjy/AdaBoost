@@ -17,6 +17,6 @@ np.array(dataset)
 # dataset2=dataset[:,44:84]
 
 
-dataset=np.c_[dataset1,dataset2]
+# dataset=np.c_[dataset1,dataset2]
 
 dataSet=np.random.permutation(dataset)
