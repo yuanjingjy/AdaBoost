@@ -15,5 +15,4 @@ dataSet=np.array(data2)
 dataSet[:,0:78]=ann.preprocess(dataSet[:,0:78])
 dataSet[:,0:78]=ann.preprocess1(dataSet[:,0:78])
 # dataSet=np.array(dataSet)
-# print("test")
- ###read the data
+# print("test"）
