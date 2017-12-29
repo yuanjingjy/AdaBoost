@@ -113,7 +113,7 @@ sorteigen.to_csv('D:/each.csv', encoding='utf-8', index=True)
 svmscore = pd.DataFrame(scores)
 svmscore = svmscore.sort_values(by='score', ascending=False, axis=1)
 svmscore.to_csv('D:/anntest.csv', encoding='utf-8', index=True)
-print(test)
+print(“test”)
 
 
 
