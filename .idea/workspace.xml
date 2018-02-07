@@ -6,9 +6,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/ann.py" afterPath="$PROJECT_DIR$/ann.py" />
       <change beforePath="$PROJECT_DIR$/global_list.py" afterPath="$PROJECT_DIR$/global_list.py" />
-      <change beforePath="$PROJECT_DIR$/myown/featureselection.ipynb" afterPath="$PROJECT_DIR$/myown/featureselection.ipynb" />
-      <change beforePath="$PROJECT_DIR$/myown/test.ipynb" afterPath="$PROJECT_DIR$/myown/test.ipynb" />
-      <change beforePath="$PROJECT_DIR$/testcross.py" afterPath="$PROJECT_DIR$/testcross.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -530,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1514514380365</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="测试62个特征值">
+      <created>1518047921897</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1518047921897</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -631,7 +635,8 @@
     <MESSAGE value="各样本顺序打乱，permutation函数" />
     <MESSAGE value="神经网络的测试程序" />
     <MESSAGE value="逻辑回归的测试程序" />
-    <option name="LAST_COMMIT_MESSAGE" value="逻辑回归的测试程序" />
+    <MESSAGE value="测试62个特征值" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试62个特征值" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
