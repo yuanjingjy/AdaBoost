@@ -17,4 +17,3 @@ dataSet=np.array(data2)#78个特征值加1列标签
 # dataSet[:,0:78]=ann.preprocess1(dataSet[:,0:78])
 # dataSet=np.array(dataSet)
 # print("test")
- ###read the data
