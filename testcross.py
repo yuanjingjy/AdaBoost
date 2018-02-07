@@ -22,12 +22,12 @@ fp_test=[];
 AUCtest=[]
 
 ###
-######加载全部78个特征值
-# import  global_list as gl
-# dataset=gl.dataSet
-# dataset=np.array(dataset)
-# dataArr=dataset[:,0:78]
-# labelArr=dataset[:,78]
+######加载全部62个特征值
+import  global_list as gl
+dataset=gl.dataSet
+dataset=np.array(dataset)
+dataArr=dataset[:,0:62]
+labelArr=dataset[:,62]
 
 # ######加载遗传算法降维后的35个特征值（MIV降维后的时eigen_MIV，34个）
 # dataset=pd.read_csv("eigen_GA.csv")
@@ -36,13 +36,13 @@ AUCtest=[]
 # labelArr=dataset[:,35]
 
 #######加载逻辑回归降维后的10个特征值
-dataset=pd.read_csv("LR9.csv")
-dataset=dataset.fillna(np.mean(dataset))
-dataset=np.array(dataset)
-dataArr=dataset[:, 0:10]
-# dataMat=ann.preprocess(dataMat)
-# dataMat=ann.preprocess1(dataMat)
-labelArr=dataset[:,10]
+# dataset=pd.read_csv("LR9.csv")
+# dataset=dataset.fillna(np.mean(dataset))
+# dataset=np.array(dataset)
+# dataArr=dataset[:, 0:10]
+# # dataMat=ann.preprocess(dataMat)
+# # dataMat=ann.preprocess1(dataMat)
+# labelArr=dataset[:,10]
 
 for i in range(len(labelArr)):
     if labelArr[i]==0:
@@ -59,7 +59,7 @@ for train,test in skf.split(dataArr,labelArr):
     train_out=label[train];
     test_out=label[test];
     # train_in, train_out = RandomUnderSampler().fit_sample(train_in, train_out)
-    classifierArray,aggClassEst=adaboost.adaBoostTrainDS(train_in,train_out,100);            
+    classifierArray,aggClassEst=adaboost.adaBoostTrainDS(train_in,train_out,200);
     prediction_train,prob_train=adaboost.adaClassify(train_in,classifierArray);#测试训练集
     prediction_test,prob_test=adaboost.adaClassify(test_in,classifierArray);#测试测试集
     AUC_tmp=adaboost.plotROC(aggClassEst.T,train_out);#计算AUC
