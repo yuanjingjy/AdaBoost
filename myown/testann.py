@@ -16,8 +16,8 @@ from sklearn.model_selection import StratifiedKFold
 import  global_list as gl
 dataset=gl.dataSet
 dataset=np.array(dataset)
-dataMat=dataset[:,0:78]
-labelMat=dataset[:,78]
+dataMat=dataset[:,0:62]
+labelMat=dataset[:,62]
 
 # ######加载遗传算法降维后的35个特征值（MIV降维后的时eigen_MIV，34个）,归一化之后的
 # dataset=pd.read_csv("eigen_GA.csv")

@@ -25,8 +25,8 @@ import  pandas as  pd#python data analysis
 import  global_list as gl
 dataset=gl.dataSet
 dataset=np.array(dataset)
-dataMat=dataset[:,0:78]
-labelMat=dataset[:,78]
+dataMat=dataset[:,0:62]
+labelMat=dataset[:,62]
 
 # ###################遗传算法降维后的特征值#################
 # dataset=pd.read_csv("LR9.csv")
@@ -85,7 +85,7 @@ for train,test in skf.split(dataMat,labelMat):
     train_out=labelMat[train]
     test_out=labelMat[test]
     # train_in, train_out = RandomUnderSampler().fit_sample(train_in, train_out)
-    trainWeights=LR.stocGradAscent1(train_in,train_out,200)
+    trainWeights=LR.stocGradAscent1(train_in,train_out,300)
     
     len_train=np.shape(train_in)[0]
     len_test=np.shape(test_in)[0]
