@@ -21,7 +21,8 @@ def loadDataSet(filename):
     return dataMat,labelMat
 
 def preprocess(dataset):#将特征值规范化到[0,1]之间
-    min_max_scaler=preprocessing.MinMaxScaler(    X_train01=min_max_scaler.fit_transform(dataset)
+    min_max_scaler=preprocessing.MinMaxScaler()
+    X_train01 = min_max_scaler.fit_transform(dataset)
     return X_train01
 
 def preprocess1(dataset):#normalize the data between -1 and 1
