@@ -23,13 +23,13 @@ import  pandas as  pd#python data analysis
 
 #####加载全部78个特征值
 import  global_list as gl
-dataset=gl.dataSet
-dataset=np.array(dataset)
-dataMat=dataset[:,0:62]
-labelMat=dataset[:,62]
+# dataset=gl.dataSet
+# dataset=np.array(dataset)
+# dataMat=dataset[:,0:62]
+# labelMat=dataset[:,62]
 
-# ###################遗传算法降维后的特征值#################
-# dataset=pd.read_csv("LR9.csv")
+###################遗传算法降维后的特征值#################
+# dataset=pd.read_csv("LR10.csv")
 # dataset=dataset.fillna(np.mean(dataset))
 # dataset=np.array(dataset)
 # dataMat=dataset[:, 0:10]
@@ -37,11 +37,17 @@ labelMat=dataset[:,62]
 # dataMat=ann.preprocess1(dataMat)
 # labelMat=dataset[:,10]
 
-# # ######加载遗传算法降维后的35个特征值（MIV降维后的时eigen_MIV，34个），归一化之后的
-# dataset=pd.read_csv("eigen_GA.csv")
+# ######加载遗传算法降维后的31个特征值，归一化之后的
+dataset=pd.read_csv("GA31.csv")
+dataset=np.array(dataset)
+dataMat=dataset[:, 0:31]
+labelMat=dataset[:,31]
+
+# # ######MIV将为后的30个特征值（MIV降维后的时eigen_MIV，34个），归一化之后的
+# dataset=pd.read_csv("MIV30.csv")
 # dataset=np.array(dataset)
-# dataMat=dataset[:, 0:35]
-# labelMat=dataset[:,35]
+# dataMat=dataset[:, 0:30]
+# labelMat=dataset[:,30]
 
 # for i in range(len(labelMat)):
 #     if labelMat[i] == -1:
@@ -85,7 +91,7 @@ for train,test in skf.split(dataMat,labelMat):
     train_out=labelMat[train]
     test_out=labelMat[test]
     # train_in, train_out = RandomUnderSampler().fit_sample(train_in, train_out)
-    trainWeights=LR.stocGradAscent1(train_in,train_out,300)
+    trainWeights=LR.stocGradAscent1(train_in,train_out,500)
     
     len_train=np.shape(train_in)[0]
     len_test=np.shape(test_in)[0]
