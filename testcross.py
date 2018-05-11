@@ -22,21 +22,27 @@ fp_test=[];
 AUCtest=[]
 
 ###
-######加载全部62个特征值
-import  global_list as gl
-dataset=gl.dataSet
-dataset=np.array(dataset)
-dataArr=dataset[:,0:62]
-labelArr=dataset[:,62]
-
-# ######加载遗传算法降维后的35个特征值（MIV降维后的时eigen_MIV，34个）
-# dataset=pd.read_csv("eigen_GA.csv")
+# ######加载全部62个特征值
+# import  global_list as gl
+# dataset=gl.dataSet
 # dataset=np.array(dataset)
-# dataArr=dataset[:, 0:35]
-# labelArr=dataset[:,35]
+# dataArr=dataset[:,0:62]
+# labelArr=dataset[:,62]
 
-#######加载逻辑回归降维后的10个特征值
-# dataset=pd.read_csv("LR9.csv")
+######加载遗传算法降维后的35个特征值（MIV降维后的时eigen_MIV，34个）
+dataset=pd.read_csv("GA31.csv")
+dataset=np.array(dataset)
+dataArr=dataset[:, 0:31]
+labelArr=dataset[:,31]
+
+# ######加载MIV降维后的30个特征值
+# dataset=pd.read_csv("MIV30.csv")
+# dataset=np.array(dataset)
+# dataArr=dataset[:, 0:30]
+# labelArr=dataset[:,30]
+
+# ######加载逻辑回归降维后的10个特征值
+# dataset=pd.read_csv("LR10.csv")
 # dataset=dataset.fillna(np.mean(dataset))
 # dataset=np.array(dataset)
 # dataArr=dataset[:, 0:10]
