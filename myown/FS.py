@@ -56,6 +56,6 @@ from skfeature.function.similarity_based import fisher_score
 from skfeature.function.information_theoretical_based import MRMR
 score = fisher_score.fisher_score(datamat, labelmat)
 idx=fisher_score.feature_ranking(score)
-score1=MRMR.mrmr(datamat,labelmat)
+score1,J,M=MRMR.mrmr(datamat,labelmat,n_selected_features=80)
 
 print("test")
