@@ -56,7 +56,7 @@ import  global_list as gl
 
 data=pd.read_csv('sortedFeature.csv')
 labelMat=data['classlabel']
-dataMat=data.ix[:,0:67]
+dataMat=data.ix[:,0:7]
 
 
 evaluate_train = []
@@ -128,7 +128,7 @@ for train,test in skf.split(dataMat,labelMat):
     prenum_test.extend(test4)
 
 Result_test=pd.DataFrame(evaluate_test,columns=['TPR','SPC','PPV','NPV','ACC','AUC','BER'])
-Result_test.to_csv('BER/BER_LR.csv')
+Result_test.to_csv('BER/BER_LR_ks.csv')
 Result_test.boxplot()
 plt.show()
 

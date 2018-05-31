@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 data = pd.read_csv('sortedFeature.csv')
 labelMat = data['classlabel']
 # dataMat=data.ix[:,0:80]
-dataMat = data.ix[:, 0:38]
+dataMat = data.ix[:, 0:11]
 dataMat = ann.preprocess(dataMat)
 # dataMat = ann.preprocess1(dataMat)
 
@@ -44,7 +44,7 @@ for train, test in skf.split(dataMat, labelMat):
     prenum_test.extend(test4)
 
 Result_test = pd.DataFrame(evaluate_test, columns=['TPR', 'SPC', 'PPV', 'NPV', 'ACC', 'AUC', 'BER'])
-Result_test.to_csv('BER/BER_SVM.csv')
+Result_test.to_csv('BER/BER_SVM_ks.csv')
 Result_test.boxplot()
 plt.show()
 

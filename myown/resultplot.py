@@ -25,11 +25,14 @@ import  numpy as np
 
 sortFS=pd.read_csv('FSsort.csv')
 names=sortFS['Features']#排序后特征值名称
-stdresult=pd.read_csv('selectresult\LRfit.csv',names=['index','std'])
-meanresult=pd.read_csv('selectresult\LRmean.csv',names=['index','mean'])
+stdresult=pd.read_csv('selectresult\SVMfit.csv',names=['index','std'])
+meanresult=pd.read_csv('selectresult\SVMmean.csv',names=['index','mean'])
 
 stdvalue=stdresult[1:81]['std']
 meanvalue=meanresult[1:81]['mean']#提取有效数值，第一行和第一列是编号
+
+stdvalue=stdvalue*100
+meanvalue=meanvalue*100
 
 std_up=meanvalue+stdvalue#平均值加标准差
 std_down=meanvalue-stdvalue#平均值减标准差
@@ -46,7 +49,7 @@ tmp=meanvalue[a]
 #创建画布，开始绘图
 plt.figure(1)
 plt.xlim(1,80)
-plt.ylim(0,0.5)
+plt.ylim(0,50)
 x=np.linspace(1,80,80)
 line_mean = plt.plot(x,meanvalue, 'r-', label='BER_mean')
 line_down=plt.plot(x,std_down ,'b:', label='BER_down')
@@ -55,13 +58,13 @@ plt.fill_between(x,std_up,std_down,color='gray',alpha=0.25)
 line_h=plt.hlines(up,1,80,'r',alpha=0.25)
 plt.plot(minindex,minvalue,'ro')
 plt.plot(a,tmp,'r^')
-plt.xticks([0,10,20,30,40,50,60,70,80,a,minindex])
+plt.xticks([1,20,30,40,50,60,70,80,a,minindex],size=8)
 line_v=plt.vlines(minindex,0,minvalue,'r',alpha=0.25)
 line_v1=plt.vlines(a,0,tmp,'r',alpha=0.25)
 plt.legend(loc='upper right')
-plt.title('BER for LR')
+# plt.title('BER for LR')
 plt.xlabel("Number of features")
-plt.ylabel("BER")
+plt.ylabel("BER(%)")
 plt.show()
 
 

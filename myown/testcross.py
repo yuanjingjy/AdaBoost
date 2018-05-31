@@ -53,7 +53,7 @@ AUCtest=[]
 
 data=pd.read_csv('sortedFeature.csv')
 labelArr=data['classlabel']
-dataArr=data.ix[:,0:50]
+dataArr=data.ix[:,0:9]
 
 labelArr=np.array(labelArr)
 dataArr=np.array(dataArr)
@@ -94,7 +94,7 @@ for train,test in skf.split(dataArr,labelArr):
     fp_test.extend(fp_test_tmp);
     
 Result_test = pd.DataFrame(evaluate_test, columns=['TPR', 'SPC', 'PPV', 'NPV', 'ACC', 'AUC', 'BER'])
-Result_test.to_csv('BER/BER_AdaBoost.csv')
+Result_test.to_csv('BER/BER_AdaBoost_ks.csv')
 Result_test.boxplot()
 plt.show()
 
