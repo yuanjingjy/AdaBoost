@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd9ef12f-d58e-4622-b9cb-db9b5b68d9d1" name="Default" comment="逻辑回归的测试程序">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myown/MEWS30.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myown/comparemodel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myown/testSVM.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/myown/testcross.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/untitled0.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.spyproject/workspace.ini" beforeDir="false" afterPath="$PROJECT_DIR$/.spyproject/workspace.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adaboost.py" beforeDir="false" afterPath="$PROJECT_DIR$/adaboost.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myown/FS.py" beforeDir="false" afterPath="$PROJECT_DIR$/myown/FS.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myown/ann.py" beforeDir="false" afterPath="$PROJECT_DIR$/myown/ann.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myown/global_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/myown/global_new.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myown/testLR.py" beforeDir="false" afterPath="$PROJECT_DIR$/myown/testLR.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myown/testann.py" beforeDir="false" afterPath="$PROJECT_DIR$/myown/testann.py" afterDir="false" />
-    </list>
+    <list default="true" id="dd9ef12f-d58e-4622-b9cb-db9b5b68d9d1" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,11 +104,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="resultplot.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="resultplot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myown/resultplot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1808">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="268">
+              <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adaboost.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/myown/adaboost.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-548">
+              <caret line="96" column="25" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -187,9 +180,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="318" />
-    <option name="y" value="22" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="562" />
+    <option name="y" value="112" />
     <option name="width" value="1010" />
     <option name="height" value="784" />
   </component>
@@ -568,7 +561,14 @@
       <option name="project" value="LOCAL" />
       <updated>1518047921897</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="0531">
+      <created>1527736341049</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1527736341049</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView" selected-index="2">
@@ -582,10 +582,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="550" y="15" width="1010" height="784" extended-state="0" />
+    <frame x="562" y="112" width="1010" height="784" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4934334" visible="true" weight="0.32712215" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4934334" visible="true" weight="0.32712215" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49481866" weight="0.33474576" />
       <window_info id="DB Browser" order="3" weight="0.32951653" />
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
@@ -596,7 +596,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.6353627" weight="0.27824858" />
       <window_info id="Favorites" order="2" sideWeight="0.5065666" side_tool="true" weight="0.23251295" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.7357513" visible="true" weight="0.2987013" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7357513" visible="true" weight="0.2987013" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -652,7 +652,8 @@
     <MESSAGE value="神经网络的测试程序" />
     <MESSAGE value="逻辑回归的测试程序" />
     <MESSAGE value="测试62个特征值" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试62个特征值" />
+    <MESSAGE value="0531" />
+    <option name="LAST_COMMIT_MESSAGE" value="0531" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -966,13 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myown/adaboost.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2688">
-          <caret line="96" column="25" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myown/FS.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4256">
@@ -1088,8 +1082,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myown/resultplot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1808">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="268">
+          <caret line="12" column="20" lean-forward="true" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myown/adaboost.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-548">
+          <caret line="96" column="25" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="25" />
         </state>
       </provider>
     </entry>
