@@ -17,9 +17,10 @@ import logRegres as LR
 import numpy as np
 from sklearn.model_selection import StratifiedShuffleSplit
 from sklearn.model_selection import StratifiedKFold
-from imblearn.under_sampling import RandomUnderSampler
+from imblearn.over_sampling import RandomOverSampler
 
 import  pandas as  pd#python data analysis
+import  matplotlib.pyplot as plt
 
 #####加载全部78个特征值
 import  global_list as gl
@@ -38,10 +39,10 @@ import  global_list as gl
 # labelMat=dataset[:,10]
 
 # ######加载遗传算法降维后的31个特征值，归一化之后的
-dataset=pd.read_csv("GA31.csv")
-dataset=np.array(dataset)
-dataMat=dataset[:, 0:31]
-labelMat=dataset[:,31]
+# dataset=pd.read_csv("GA31.csv")
+# dataset=np.array(dataset)
+# dataMat=dataset[:, 0:31]
+# labelMat=dataset[:,31]
 
 # # ######MIV将为后的30个特征值（MIV降维后的时eigen_MIV，34个），归一化之后的
 # dataset=pd.read_csv("MIV30.csv")
@@ -53,18 +54,24 @@ labelMat=dataset[:,31]
 #     if labelMat[i] == -1:
 #         labelMat[i] = 0;  # adaboost只能区分-1和1的标签
 
+data=pd.read_csv('sortedFeature.csv')
+labelMat=data['classlabel']
+dataMat=data.ix[:,0:67]
+
+
 evaluate_train = []
 evaluate_test = []
 prenum_train = []
 prenum_test  = []
 
+
 # num_sample=np.shape(dataMat1)[0]
-addones=np.ones((919,1))
-dataMat=np.c_[addones,dataMat]
 data01=ann.preprocess(dataMat)
 dataMat1=ann.preprocess1(data01)
 
-dataMat=dataMat1;
+addones=np.ones((1293,1))
+dataMat=np.c_[addones,dataMat1]
+
 #dataMat=dataMat1[:,0:78]
 #dataMat=dataMat[:,0:44]
 
@@ -90,7 +97,7 @@ for train,test in skf.split(dataMat,labelMat):
     test_in=dataMat[test]
     train_out=labelMat[train]
     test_out=labelMat[test]
-    # train_in, train_out = RandomUnderSampler().fit_sample(train_in, train_out)
+    train_in, train_out = RandomOverSampler().fit_sample(train_in, train_out)
     trainWeights=LR.stocGradAscent1(train_in,train_out,500)
     
     len_train=np.shape(train_in)[0]
@@ -119,7 +126,12 @@ for train,test in skf.split(dataMat,labelMat):
     test3,test4=ann.evaluatemodel(test_out,test_predict,proba_test)#test model with testset
     evaluate_test.extend(test3)
     prenum_test.extend(test4)
-    
+
+Result_test=pd.DataFrame(evaluate_test,columns=['TPR','SPC','PPV','NPV','ACC','AUC','BER'])
+Result_test.to_csv('BER/BER_LR.csv')
+Result_test.boxplot()
+plt.show()
+
 mean_train=np.mean(evaluate_train,axis=0)
 std_train=np.std(evaluate_train,axis=0)
 evaluate_train.append(mean_train)

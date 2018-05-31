@@ -39,10 +39,10 @@ def rowscale(dataset):#normalize the data between -1 and 1 according to row
     return dataset
 
 
-def ANNClassifier(trainin,trainout,testin):
+def ANNClassifier(neuo,trainin,trainout,testin):
     from sklearn.neural_network import MLPClassifier#import the classifier
-    clf=MLPClassifier(hidden_layer_sizes=(10,), activation='tanh',
-                      shuffle=True,solver='sgd',alpha=1e-6,batch_size=1,
+    clf=MLPClassifier(hidden_layer_sizes=(neuo,), activation='tanh',
+                      shuffle=True,solver='sgd',alpha=1e-6,batch_size=2,
                       learning_rate='adaptive')
 #==============================================================================
 #     clf=MLPClassifier(solver='lbfgs',alpha=1e-5,hidden_layer_sizes=(90,1),
@@ -58,17 +58,17 @@ def ANNClassifier(trainin,trainout,testin):
 
 def SVMClassifier(trainin,trainout,testin):
     from sklearn import svm
-    clf=svm.SVC(C=2,kernel='linear',gamma='auto',shrinking=True,probability=True,
-             tol=0.001,cache_size=200,class_weight='balanced',verbose=False,
+    clf=svm.SVC(C=50,kernel='rbf',gamma='auto',shrinking=True,probability=True,
+             tol=0.001,cache_size=1000,verbose=False,
              max_iter=-1,decision_function_shape='ovr',random_state=None)
 #    clf=svm.LinearSVC()
     clf.fit(trainin,trainout)#train the classifier
-    weights=clf.coef_
+    # weights=clf.coef_
     train_predict=clf.predict(trainin)#test the model with trainset
     test_predict=clf.predict(testin)#test the model with testset
     proba_train=clf.predict_proba(trainin)
     proba_test=clf.predict_proba(testin)
-    return train_predict, test_predict,proba_train,proba_test,weights
+    return train_predict, test_predict,proba_train,proba_test
 
 def evaluatemodel(y_true,y_predict,proba):
     from sklearn.metrics import confusion_matrix  
@@ -87,8 +87,8 @@ def evaluatemodel(y_true,y_predict,proba):
     AUC=roc_auc_score(y_true,proba)
 #    Precision=precision_score(y_true,y_predict)
 #    Recall=recall_score(y_true,y_predict)
-    return [[TPR,SPC,PPV,NPV,ACC,AUC]],[[tn,fp,fn,tp]]
+    BER=0.5*((1-TPR)+(1-SPC))
+    return [[TPR,SPC,PPV,NPV,ACC,AUC,BER]],[[tn,fp,fn,tp]]
 
 
-    
     

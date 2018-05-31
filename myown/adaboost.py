@@ -65,7 +65,7 @@ def adaBoostTrainDS(dataArr,classLabels,numIt=40):
         bestStump,error,classEst = buildStump(dataArr,classLabels,D)#build Stump
         #print （"D:",D.T）
         alpha = float(0.5*log((1.0-error)/max(error,1e-16)))
-        #print("alpha:",alpha)#calc alpha, throw in max(error,eps) to account for error=0
+        # print("alpha:",alpha)#calc alpha, throw in max(error,eps) to account for error=0
         bestStump['alpha'] = alpha  
         weakClassArr.append(bestStump)                  #store Stump Params in Array
         #print "classEst: ",classEst.T
@@ -74,10 +74,10 @@ def adaBoostTrainDS(dataArr,classLabels,numIt=40):
         D = D/D.sum()
         #calc training error of all classifiers, if this is 0 quit for loop early (use break)
         aggClassEst += alpha*classEst
-        #print ("aggClassEst: ",aggClassEst.T)
+        # print ("aggClassEst: ",aggClassEst.T)
         aggErrors = multiply(sign(aggClassEst) != mat(classLabels).T,ones((m,1)))
         errorRate = aggErrors.sum()/m
-        #print ("total error: ",errorRate)
+        # print ("total error: ",errorRate)
         if errorRate == 0.0: break
     return weakClassArr,aggClassEst
 
@@ -122,15 +122,20 @@ def plotROC(predStrengths, classLabels):
     print ("the Area Under the Curve is: ",ySum*xStep)
     return ySum*xStep
 
-def evaluatemodel(y_true,y_predict):
-    from sklearn.metrics import confusion_matrix  
+def evaluatemodel(y_true,y_predict,proba):
+    from sklearn.metrics import confusion_matrix
+    from sklearn.metrics import roc_auc_score
     tn, fp, fn, tp =confusion_matrix(y_true,y_predict).ravel();
     TPR=tp/(tp+fn);
     SPC=tn/(tn+fp);
     PPV=tp/(tp+fp);
     NPV=tn/(tn+fn);
     ACC=(tp+tn)/(tn+fp+fn+tp);
-    return [[TPR,SPC,PPV,NPV,ACC]], [[tn,fp,fn,tp]]
+    AUC = roc_auc_score(y_true, proba)
+    #    Precision=precision_score(y_true,y_predict)
+    #    Recall=recall_score(y_true,y_predict)
+    BER = 0.5 * ((1 - TPR) + (1 - SPC))
+    return [[TPR,SPC,PPV,NPV,ACC,AUC,BER]], [[tn,fp,fn,tp]]
 
 #datArr,labelArr=loadDataSet('trainset.txt')
 #classifierArray,classEst=adaBoostTrainDS(datArr,labelArr,20);

@@ -24,7 +24,7 @@ datawithdummy = dummies.join(data)#矩阵进行拼接
 colnames=datawithdummy.keys()
 dataSet=np.array(datawithdummy)
 dataSet[:,0:80]=ann.preprocess(dataSet[:,0:80])
-dataSet[:,0:80]=ann.preprocess1(dataSet[:,0:80])
+# dataSet[:,0:80]=ann.preprocess1(dataSet[:,0:80])
 
 dataMat=dataSet[:,0:80]
 labelMat=np.array(datawithdummy['Label'])

@@ -9,8 +9,9 @@ Created on Wed Sep  6 08:42:39 2017
 import ann
 import  pandas as pd
 import numpy as np
-from imblearn.under_sampling import RandomUnderSampler
+from imblearn.over_sampling import RandomOverSampler
 from sklearn.model_selection import StratifiedKFold
+import matplotlib.pyplot as plt
 
 # #####加载全部78个特征值
 # import  global_list as gl
@@ -20,12 +21,12 @@ from sklearn.model_selection import StratifiedKFold
 # labelMat=dataset[:,62]
 
 ######加载遗传算法降维后的31个特征值（MIV降维后的时eigen_MIV，34个）,归一化之后的
-dataset=pd.read_csv("GA31.csv")
-dataset=np.array(dataset)
-dataMat=dataset[:, 0:31]
-dataMat=ann.preprocess(dataMat)
-dataMat=ann.preprocess1(dataMat)
-labelMat=dataset[:,31]
+# dataset=pd.read_csv("GA31.csv")
+# dataset=np.array(dataset)
+# dataMat=dataset[:, 0:31]
+# dataMat=ann.preprocess(dataMat)
+# dataMat=ann.preprocess1(dataMat)
+# labelMat=dataset[:,31]
 
 
 ###################逐步回归降维后的特征值#################
@@ -56,6 +57,13 @@ labelMat=dataset[:,31]
 # dataMat=ann.preprocess(dataMat)
 # dataMat=ann.preprocess1(dataMat)
 
+data=pd.read_csv('sortedFeature.csv')
+labelMat=data['classlabel']
+# dataMat=data.ix[:,0:80]
+dataMat=data.ix[:,0:38]
+dataMat=ann.preprocess(dataMat)
+dataMat=ann.preprocess1(dataMat)
+neuo=4
 
 
 evaluate_train=[]
@@ -70,8 +78,8 @@ for train, test in skf.split(dataMat, labelMat):
     test_in=dataMat[test]
     train_out=labelMat[train]
     test_out=labelMat[test]
-    train_in, train_out = RandomUnderSampler().fit_sample(train_in, train_out)
-    train_predict,test_predict,proba_train,proba_test=ann.ANNClassifier(train_in,train_out,test_in)
+    train_in, train_out = RandomOverSampler().fit_sample(train_in, train_out)
+    train_predict,test_predict,proba_train,proba_test=ann.ANNClassifier(neuo,train_in,train_out,test_in)
     proba_train=proba_train[:,1]
     proba_test=proba_test[:,1]
     test1,test2=ann.evaluatemodel(train_out,train_predict,proba_train)#test model with trainset
@@ -81,7 +89,12 @@ for train, test in skf.split(dataMat, labelMat):
     test3,test4=ann.evaluatemodel(test_out,test_predict,proba_test)#test model with testset
     evaluate_test.extend(test3)
     prenum_test.extend(test4)
-    
+
+Result_test=pd.DataFrame(evaluate_test,columns=['TPR','SPC','PPV','NPV','ACC','AUC','BER'])
+Result_test.to_csv('BER/BER_ANN.csv')
+Result_test.boxplot()
+plt.show()
+
 mean_train=np.mean(evaluate_train,axis=0)
 std_train=np.std(evaluate_train,axis=0)
 evaluate_train.append(mean_train)
